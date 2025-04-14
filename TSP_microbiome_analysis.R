@@ -56,7 +56,7 @@ alpha_Indoor <- TSP_Indoor %>%
     .alpha=c('Shannon'),
     test = "wilcox.test",
     size = 0.2,
-    text = 4)  ## p-value = 0.6
+    text = 4)
 
 alpha_Indoor
 
@@ -83,7 +83,7 @@ alpha_Outdoor <- TSP_Outdoor %>%
     .alpha=c('Shannon'),
     test = "wilcox.test",
     size = 0.2,
-    text = 4)  ## p-value = 0.6
+    text = 4) 
 
 alpha_Outdoor
 
@@ -115,7 +115,7 @@ alpha_IndoorOutdoor
 
 
 TSP_IndoorOutdoor %<>% 
-  mp_decostand(.abundance=Abundance) ### misura la distanza
+  mp_decostand(.abundance=Abundance)
 TSP_IndoorOutdoor
 
 TSP_IndoorOutdoor %<>% mp_cal_dist(.abundance=hellinger, distmethod="bray")
